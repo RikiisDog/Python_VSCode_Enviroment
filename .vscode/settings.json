@@ -1,0 +1,33 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true, // 保存時に自動フォーマット
+        "editor.formatOnPaste": false, // ペースト時に自動フォーマットを停止
+        "editor.formatOnType": false, // 入力時の自動フォーマットを無効化
+        "editor.dragAndDrop": false, // ドラッグ&ドロップでのコード移動を禁止
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true // import文を保存時に自動ソート
+        },
+        "files.eol": "\n", // 改行文字を\nにする
+        "files.autoGuessEncoding": true, // 文字コードを自動的に判別する
+        "files.trimFinalNewlines": true, // 保存時、行末に空行を挿入
+        "files.insertFinalNewline": true, // 保存時、行末に存在する空行を削除
+        "files.trimTrailingWhitespace": true,  // 保存時、行末に存在する空白文字を削除
+    },
+    "python.venvPath": "${projectfolder}/.venv", // 仮想環境ディレクトリを指定
+    "python.pythonPath": "${projectfolder}/.venv/Scripts/python", // 使用するpythonを指定
+    "python.linting.enabled": true, // リンター有効化
+    "python.linting.pylintEnabled": false, // デフォルトで有効なpylintを無効化
+    "python.linting.lintOnSave": true, // 保存時にリンター自動実行
+    "python.formatting.provider": "black", // pythonのフォーマッターを指定
+    "python.linting.flake8Enabled": true, // flake8有効化
+    "python.linting.flake8Args": [ // 1行の最大文字数を79文字以内に設定(PEP)
+        "--max-line-length",
+        "79",
+    ],
+    "python.languageServer": "Pylance", // 言語サーバをPylanceに指定
+    "python.analysis.typeCheckingMode": "basic", // 基本的な型チェックをON
+    "python.analysis.diagnosticSeverityOverrides": { // 診断の重大度レベルをオーバーライド
+        "reportMissingImports": "none",
+        "reportOptionalMemberAccess": "none",
+    }
+}
